@@ -21,7 +21,9 @@ export default function Header() {
         <h2 className="text-cyan-800 font-bold md:text-xl md:leading-5 leading-3 text-sm">
           Caleasy
         </h2>
-        <p className="text-neutral-400 text-xs">Ingenieria para estudiantes</p>
+        <p className="text-neutral-400 text-xs md:text-base">
+          Ingenieria para estudiantes
+        </p>
       </Link>
       <div className="flex items-center md:hidden mr-4">
         <button onClick={handleShowMenu}>

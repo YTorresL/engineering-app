@@ -13,25 +13,16 @@ export default function Home() {
   return (
     <>
       <Header />
-      <nav className="w-5/6 mx-auto">
-        <ul className="flex justify-center">
-          {navigation.map((item, index) => (
-            <li className="px-3 py-4" key={index}>
-              <Link
-                href={item.path}
-                className="text-xs font-semibold text-black uppercase"
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <section className="grid grid-cols-3 gap-5 my-8 container mx-auto">
-        <main className="border-2 border-gray-100 col-span-2">
+      <section className="grid grid-cols-1 lg:grid-cols-3 gap-5 my-4 lg:my-8 w-[94%] mx-auto">
+        <main className="border-2 border-gray-100 lg:col-span-2">
+          <div className="bg-gray-100 w-full">
+            <h2 className="text-gray-900 text-lg font-semibold py-2 pl-2">
+              News Blog
+            </h2>
+          </div>
           <NewBlog />
         </main>
-        <aside className="border-2 border-gray-100">
+        <aside>
           <TopBlog />
         </aside>
       </section>

@@ -2,9 +2,9 @@ import Image from "next/image"
 
 export default function NewBlog() {
   return (
-    <div className="m-2 border border-gray-100">
-      <div className="p-4 flex">
-        <div className="w-14 h-14">
+    <div className="m-2 lg:m-3 border border-gray-100">
+      <div className="p-2 lg:p-4 flex justify-between">
+        <div className="h-10 w-10 md:w-16 md:h-16">
           <Image
             src="/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg"
             width={100}
@@ -12,15 +12,14 @@ export default function NewBlog() {
             className="rounded-full w-full h-full object-cover"
           ></Image>
         </div>
-        <div className="flex flex-col pl-4">
-          <div className="flex">
-            <h1 className="text-2xl font-bold">Nombre de usuario</h1>
-            <h2 className="text-xl font-bold ml-2">Hace 2 horas</h2>
+        <div className="flex flex-col pl-2 lg:pl-4 w-[82%] md:w-[91%]">
+          <div className="flex flex-col mb-1">
+            <h1 className="text-gray-900 text-lg font-semibold mb-0">
+              Titulo del blog
+            </h1>
+            <h2 className="text-sm text-gray-500">Hace 2 horas</h2>
           </div>
-          <div className="flex">
-            <h2 className="text-xl font-bold">Titulo del blog</h2>
-          </div>
-          <p>
+          <p className="text-sm">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
