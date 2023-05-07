@@ -5,7 +5,10 @@ const navigation = [
   {
     name: "Calculo I",
     path: "#",
-    content: [{ title: "Calculo I", path: "#" }],
+    content: [
+      { title: "Calculo I", path: "#" },
+      { title: "Calculo II", path: "#" },
+    ],
   },
   {
     name: "Calculo II",
@@ -31,8 +34,11 @@ export default function Navigation() {
             </summary>
             <ul className="flex flex-col ml-1 border-l">
               {item.content.map((subitem) => (
-                <li className="ml-6 mb-1 my-1" key={subitem.title}>
-                  <Link href={subitem.path} className="line-clamp-1">
+                <li className="ml-6 mt-1" key={subitem.title}>
+                  <Link
+                    href={subitem.path}
+                    className="line-clamp-1 text-gray-600"
+                  >
                     {subitem.title}
                   </Link>
                 </li>

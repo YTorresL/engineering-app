@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export default function NewBlog() {
+export default function NewPosts() {
   return (
     <div className="m-2 lg:m-3 border border-gray-100">
       <div className="p-2 lg:p-4 flex justify-between">
@@ -14,7 +14,7 @@ export default function NewBlog() {
         </div>
         <div className="flex flex-col pl-2 lg:pl-2 w-[82%] md:w-[92%]">
           <div className="flex flex-col mb-1">
-            <h1 className="text-gray-900 text-lg font-semibold mb-0">
+            <h1 className="text-gray-900 text-base md:text-lg mt-1 md:mt-3 font-semibold mb-0">
               Titulo del blog
             </h1>
             <h2 className="text-sm text-gray-500">Hace 2 horas</h2>
