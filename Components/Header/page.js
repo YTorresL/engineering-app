@@ -16,7 +16,7 @@ export default function Header() {
     setShowMenu(!showMenu)
   }
   return (
-    <header className="flex md:h-[4.5rem] h-[3.5rem] py-4 justify-between border-b-2 border-gray-100 md:container mx-auto">
+    <header className="flex md:h-[4.5rem] h-[3.5rem] py-4 justify-between border-b-2 border-gray-100 w-[95%] mx-auto">
       <Link href="/" className="ml-3 xl:ml-0">
         <h2 className="text-cyan-800 font-bold md:text-xl md:leading-5 leading-3 text-sm">
           Caleasy
@@ -31,7 +31,7 @@ export default function Header() {
         </button>
         <div
           className={`fixed top-0 left-0 w-full h-screen bg-black/90 transition-all ${
-            showMenu ? "hidden" : ""
+            showMenu ? "" : "hidden"
           }`}
         >
           <Close
