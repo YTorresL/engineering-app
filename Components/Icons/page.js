@@ -31,6 +31,14 @@ export function User(props) {
   )
 }
 
+export function Down(props) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90" {...props}>
+      <path d="M12.7 33.7c-.4.3-.7 1.4-.7 2.2C12 38 43 69 45 69c.8 0 8.7-7.1 17.4-15.9 11.2-11.3 15.7-16.4 15.4-17.7-.3-1.8-1.9-1.9-32.4-2.2-17.6-.1-32.3.1-32.7.5z" />
+    </svg>
+  )
+}
+
 export function SearchIcon(props) {
   return (
     <svg
@@ -56,6 +64,40 @@ export function Close(props) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" {...props}>
       <path d="M4.707 3.293 3.293 4.707 10.586 12l-7.293 7.293 1.414 1.414L12 13.414l7.293 7.293 1.414-1.414L13.414 12l7.293-7.293-1.414-1.414L12 10.586 4.707 3.293z" />
+    </svg>
+  )
+}
+
+export function Caleasy(props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      data-name="Capa 1"
+      viewBox="0 0 339.73 123.31"
+      {...props}
+    >
+      <title>{"Caleasy"}</title>
+      <text
+        style={{
+          fontSize: 72,
+          fill: "#165a70",
+          fontFamily: "Impact",
+        }}
+        transform="translate(0 99.5)"
+      >
+        {"Caleasy"}
+      </text>
+      <path
+        d="m254.45 239.67 13.12 10.64A54.06 54.06 0 0 0 281 237.19l-10.51-13.05 3-6.83 16.81-1.85a54.41 54.41 0 0 0 .9-9.87c0-3-.71-8.79-.71-8.79l-16.71-1.8-2.78-7 10.62-13a54.35 54.35 0 0 0-13-13.29l-13.43 10.48a28.61 28.61 0 0 0-6.53-3.07l-1.87-16.76a55.54 55.54 0 0 0-9.89-.9 54.14 54.14 0 0 0-9 .75l-1.82 16.62a22.51 22.51 0 0 0-3.43 1 22.79 22.79 0 0 0-3.4 1.71l-12.93-10.74a54 54 0 0 0-13.47 13.2l10.42 13.1"
+        style={{
+          fill: "none",
+          stroke: "#165a70",
+          strokeLinecap: "round",
+          strokeMiterlimit: 10,
+          strokeWidth: 10,
+        }}
+        transform="translate(-12.54 -146.36)"
+      />
     </svg>
   )
 }

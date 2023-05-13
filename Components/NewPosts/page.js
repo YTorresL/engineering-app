@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function NewPosts() {
   return (
-    <div className="m-2 lg:m-3 border border-gray-100">
+    <div className="m-2 lg:m-3 border border-gray-300 rounded-lg">
       <div className="p-2 lg:p-4 flex justify-between">
         <div className="h-10 w-10 md:w-14 md:h-14">
           <Image
@@ -27,6 +27,9 @@ export default function NewPosts() {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur.
           </p>
+          <h3 className="text-sm text-gray-500 text-right mt-2">
+            Yalith Torres
+          </h3>
         </div>
       </div>
     </div>
