@@ -24,7 +24,7 @@ export function Footer() {
           <Link href="/">
             <Caleasy className="lg:w-28 w-20" />
           </Link>
-          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 mt-2 sm:mt-0 sm:mb-0 dark:text-gray-400">
             {links.map((link, index) => (
               <li key={index}>
                 <Link

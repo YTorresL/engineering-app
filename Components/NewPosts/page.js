@@ -1,16 +1,18 @@
 import Image from "next/image"
 
-export default function NewPosts() {
+export default function NewPosts({ hidden }) {
   return (
     <div className="m-2 lg:m-3 border border-gray-300 rounded-lg">
       <div className="p-2 lg:p-4 flex justify-between">
-        <div className="h-10 w-10 md:w-14 md:h-14">
-          <Image
-            src="/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg"
-            width={100}
-            height={100}
-            className="rounded-full w-full h-full object-cover"
-          ></Image>
+        <div className={hidden}>
+          <div className="h-10 w-10 md:w-14 md:h-14">
+            <Image
+              src="/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg"
+              width={100}
+              height={100}
+              className="rounded-full w-full h-full object-cover"
+            ></Image>
+          </div>
         </div>
         <div className="flex flex-col pl-2 lg:pl-2 w-[82%] md:w-[92%]">
           <div className="flex flex-col mb-1">

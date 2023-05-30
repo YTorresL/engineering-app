@@ -4,7 +4,7 @@ import { Search } from "@/Components/Search/page"
 import Navigation from "@/Components/Navigation/page"
 import { Titles } from "@/Components/Titles/pages"
 import NewPosts from "@/Components/NewPosts/page"
-import TopPosts from "@/Components/TopPosts/page"
+import TopPosts from "@/Components/Footer/TopPosts/page"
 import { Footer } from "@/Components/Footer/page"
 
 export default function Home() {

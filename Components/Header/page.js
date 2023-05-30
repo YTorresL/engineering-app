@@ -2,6 +2,7 @@
 import { Menu, Close, Caleasy, Down } from "@/Components/Icons/page"
 import Link from "next/link"
 import { useState } from "react"
+import useUser from "@/hooks/useUser"
 
 const headerNav = [
   { path: "/", name: "Inicio" },
@@ -11,7 +12,7 @@ const headerNav = [
 ]
 
 const login = [
-  { path: "/upload", name: "Publicar" },
+  { path: "/crear", name: "Publicar" },
   { path: "/user", name: "Perfil", icon: <Down className="w-4 h-4 ml-1" /> },
 ]
 
@@ -19,6 +20,7 @@ const noSession = [{ path: "/login", name: "Iniciar sección" }]
 
 export default function Header({ path }) {
   const [showMenu, setShowMenu] = useState(false)
+  const user = useUser()
 
   const handleShowMenu = () => {
     setShowMenu(!showMenu)
@@ -29,7 +31,7 @@ export default function Header({ path }) {
         <Link href="/" className="ml-3 xl:ml-0">
           <Caleasy className="lg:w-28 w-20" />
         </Link>
-        <div className="flex items-center md:hidden mr-4">
+        <div className="flex items-center lg:hidden mr-4">
           <button onClick={handleShowMenu}>
             <Menu className="w-6 h-6" fill="#000" />
           </button>
@@ -52,7 +54,7 @@ export default function Header({ path }) {
             </ul>
           </div>
         </div>
-        <div className="md:flex hidden">
+        <div className="lg:flex hidden">
           <ul className="flex">
             {headerNav.map((item, index) => (
               <li
@@ -65,33 +67,37 @@ export default function Header({ path }) {
               </li>
             ))}
           </ul>
-          <ul className="flex">
-            {noSession.map((item, index) => (
-              <li
-                className={`mr-3 py-2 px-3 font-medium ${
-                  path === item.path ? "border-cyan-800 border-b-2" : ""
-                }`}
-                key={index}
-              >
-                <Link href={item.path}>{item.name}</Link>
-              </li>
-            ))}
-          </ul>
-          <ul className="flex">
-            {login.map((item, index) => (
-              <li
-                className={`mr-3 py-2 px-3 font-medium ${
-                  path === item.path ? "border-cyan-800 border-b-2" : ""
-                }`}
-                key={index}
-              >
-                <Link href={item.path} className="flex">
-                  {item.name}
-                  {item.icon}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          {user === undefined && (
+            <ul className="flex">
+              {noSession.map((item, index) => (
+                <li
+                  className={`mr-3 py-2 px-3 font-medium ${
+                    path === item.path ? "border-cyan-800 border-b-2" : ""
+                  }`}
+                  key={index}
+                >
+                  <Link href={item.path}>{item.name}</Link>
+                </li>
+              ))}
+            </ul>
+          )}
+          {user && (
+            <ul className="flex">
+              {login.map((item, index) => (
+                <li
+                  className={`mr-3 py-2 px-3 font-medium ${
+                    path === item.path ? "border-cyan-800 border-b-2" : ""
+                  }`}
+                  key={index}
+                >
+                  <Link href={item.path} className="flex">
+                    {item.name}
+                    {item.icon}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     </header>
