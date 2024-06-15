@@ -1,6 +1,6 @@
 "use client"
-import { Button } from "@/Components/Button/page"
-import { Caleasy, Google } from "@/Components/Icons/page"
+import { Button } from "@/components/Button/page"
+import { Caleasy, Google } from "@/components/Icons/page"
 import Link from "next/link"
 import { loginWithGoogle } from "@/firebase/client"
 import { useEffect } from "react"

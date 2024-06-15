@@ -1,8 +1,7 @@
 "use client"
-import { Menu, Close, Caleasy, Down } from "@/Components/Icons/page"
+import { Menu, Close, Caleasy, Down } from "@/components/Icons/page"
 import Link from "next/link"
 import { useState } from "react"
-import useUser from "@/hooks/useUser"
 
 const headerNav = [
   { path: "/", name: "Inicio" },
@@ -18,9 +17,8 @@ const login = [
 
 const noSession = [{ path: "/login", name: "Iniciar sección" }]
 
-export default function Header({ path }) {
+export default function Header({ path, user }) {
   const [showMenu, setShowMenu] = useState(false)
-  const user = useUser()
 
   const handleShowMenu = () => {
     setShowMenu(!showMenu)

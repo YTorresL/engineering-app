@@ -1,4 +1,4 @@
-export function Titles({ title }) {
+export default function Titles({ title }) {
   return (
     <div className="w-full flex items-center">
       <h2 className="text-sm font-semibold py-2 pl-2 uppercase tracking-wide text-cyan-800">

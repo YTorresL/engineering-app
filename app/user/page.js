@@ -1,8 +1,8 @@
-import Header from "@/Components/Header/page"
-import { Footer } from "@/Components/Footer/page"
+import Header from "@/components/Header/page"
+import { Footer } from "@/components/Footer/page"
 import Link from "next/link"
 import Image from "next/image"
-import NewPosts from "@/Components/NewPosts/page"
+import NewPosts from "@/components/NewPosts/page"
 
 const config = [
   { name: "Perfil", path: "/user" },

@@ -1,4 +1,4 @@
-import { SearchIcon } from "@/Components/Icons/page"
+import { SearchIcon } from "@/components/Icons/page"
 
 export function Search() {
   return (

@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Titles } from "../../Titles/pages"
+import Titles from "../Titles/page"
 
 export default function TopPosts() {
   return (
